@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emoji Eyes</title>
+  <style>
+    .eyes-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .eye {
+      width: 100px;
+      height: 100px;
+      background-color: white;
+      border: 5px solid #000;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .pupil {
+      width: 40px;
+      height: 40px;
+      background-color: #000;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: blink 3s infinite;
+    }
+
+    @keyframes blink {
+      0%, 90%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+      95% {
+        transform: translate(-50%, -50%) scale(1, 0.2);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="eyes-container">
+    <div class="eye">
+      <div class="pupil"></div>
+    </div>
+    <div class="eye">
+      <div class="pupil"></div>
+    </div>
+  </div>
+</body>
+</html>
+
